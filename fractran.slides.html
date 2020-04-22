@@ -13533,7 +13533,7 @@ held as a single integer - there are no messy "tapes" or other foreign concepts 
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="sumgame,-viewed-as-a-python-register-machine">sumgame, viewed as a python register machine<a class="anchor-link" href="#sumgame,-viewed-as-a-python-register-machine">&#182;</a></h2>
+<h2 id="SUMGAME,-viewed-as-a-python-register-machine">SUMGAME, viewed as a python register machine<a class="anchor-link" href="#SUMGAME,-viewed-as-a-python-register-machine">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13619,7 +13619,7 @@ while sum(registers.values()) &gt; 0:
 </div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So, we see that what FRACTRAN is essentially doing is checking if given registers are zero, and then increasing and decreasing registers as a result. Recall that the instruction set for Minsky's counter machine (which is known to be Turing complete) are INC, DEC, and JZ, so if you squint a bit...</p>
+<p>So, we see that what FRACTRAN is essentially doing is checking if given registers are zero, and then increasing and decreasing registers as a result. Recall that the instruction set for Minsky's counter machine (which is known to be Turing complete) is INC(r, x) and JZDEC(r, x, y), so if you squint a bit...</p>
 <table>
 <thead><tr>
 <th>Minsky Counter Machine</th>
@@ -13628,12 +13628,12 @@ while sum(registers.values()) &gt; 0:
 </thead>
 <tbody>
 <tr>
-<td>line z: INC i, GOTO line x</td>
-<td>i*x/z</td>
+<td>line z: INC r, GOTO line x</td>
+<td>r*x/z</td>
 </tr>
 <tr>
-<td>line z: IF i is zero, GOTO line x, ELSE DEC i, GOTO line y</td>
-<td>y/(i*z), x/z</td>
+<td>line z: IF r is zero, GOTO line x, ELSE DEC r, GOTO line y</td>
+<td>y/(r*z), x/z</td>
 </tr>
 </tbody>
 </table>
@@ -14100,6 +14100,8 @@ I don't know why you've all listened to me explaining it, when you could have be
 <a href="https://dx.doi.org/10.1007/978-1-4612-4808-8_2">https://dx.doi.org/10.1007/978-1-4612-4808-8_2</a></p>
 <p>or reading this illustrated popsci explanation of PRIMEGAME in particular:
 <a href="https://www.jstor.org/stable/2690263">https://www.jstor.org/stable/2690263</a></p>
+<p>Minsky on computability:
+<a href="https://www.jstor.org/stable/1970290">https://www.jstor.org/stable/1970290</a></p>
 <p>FRACTRAN in FRACTRAN:
 <a href="https://github.com/jbeder/fractran">https://github.com/jbeder/fractran</a> (but where is the quine?)</p>
 <p>This repository, if you want to play with my implementation for some reason
